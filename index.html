@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+ 
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            
+            const navLinks = document.querySelectorAll('nav a');
+
+         
+            const loginPage = document.querySelector('.login-page');
+
+        
+            navLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                 
+                    document.querySelectorAll('.page').forEach(page => {
+                        page.style.display = 'none';
+                    });
+                        
+                    const targetPageId = this.getAttribute('href').substring(1);
+                    document.getElementById(targetPageId).style.display = 'block';
+ 
+                    if (targetPageId !== 'home') {
+                        loginPage.style.display = 'none';
+                    } else {
+                        loginPage.style.display = 'block';
+                    }
+                });
+            });
+        });
+    </script>
+
+    <title>Left panel</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="#home">
+                    <i class="fas fa-home"></i>
+                    <span class="nav-item">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="#profile">
+                    <i class="fas fa-user"></i>
+                    <span class="nav-item">Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="#wallet">
+                    <i class="fas fa-address-book"></i>
+
+                    <span class="nav-item">Contact</span>
+                </a>
+            </li>
+            <li>
+                <a href="#analytics">
+                    <i class="fas fa-info-circle"></i>
+                    <span class="nav-item">Information</span>
+                </a>
+            </li>
+            <li>
+                <a href="#tasks">
+                    <i class="fas fa-book"></i>
+                    <span class="nav-item">Guide</span>
+                </a>
+            </li>
+            <li>
+                <a href="#settings">
+                    <i class="fas fa-cog"></i>
+                    <span class="nav-item">Settings</span>
+                </a>
+            </li>
+            <li>
+                <a href="#help">
+                    <i class="fas fa-question-circle"></i>
+                    <span class="nav-item">Help</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span class="nav-item">Log out</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="home" class="page">
+        <div class="login-page">
+            <div class="form">
+                <div class="login">
+                    <div class="login-header">
+                        <h3>LOGIN</h3>
+                        <p>Please enter your credentials to login.</p>
+                    </div>
+                </div>
+                <form class="login-form">
+                    <input type="text" placeholder="username" />
+                    <input type="password" placeholder="password" />
+                    <button>login</button>
+                    <p class="message">Not registered? <a href="#">Create an account</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="profile" class="page">
+        <div class="profile-content">
+            <h2>About the Left Panel</h2>
+            <p>The left panel is a navigation menu that allows users to access various sections of the application. It provides easy and intuitive access to different features and functionalities.</p>
+            <h2>About the Project</h2>
+            <p>This project aims to create a user-friendly and responsive web application with a left panel navigation layout. The navigation menu is implemented using HTML, CSS, and JavaScript. It allows users to navigate between different pages or sections of the application.</p>
+        </div>
+    </div>
+
+    <div id="wallet" class="page">
+        <div class="section_10">
+            <div class="responsive-container-block container">
+              <form id="iox4">
+                <div class="responsive-container-block form-container">
+                  <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12 first-name" id="i10mt-5">
+                    <p class="text-blk input-title">
+                      Full Name
+                    </p>
+                    <input class="input" id="ijowk-5" name="FirstName" placeholder="First Name">
+                  </div>
+                  <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                    <p class="text-blk input-title">
+                      Email Address
+                    </p>
+                    <input class="input" id="ipmgh-5" name="Email" placeholder="Email">
+                  </div>
+                  <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i-5">
+                    <p class="text-blk input-title">
+                      Message
+                    </p>
+                    <textarea class="textinput" id="i5vyy-5" placeholder="Write a message..."></textarea>
+                  </div>
+                  <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12">
+                    <button class="submit-btn" id="w-c-s-bgc_p-1-dm-id-3">
+                      Send Message
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+    </div>
+
+    <div id="analytics" class="page">
+        <!-- Analytics page content -->
+    </div>
+
+    <div id="tasks" class="page">
+        <!-- Tasks page content -->
+    </div>
+
+    <div id="settings" class="page">
+        <!-- Settings page content -->
+    </div>
+
+    <div id="help" class="page">
+        <!-- Help page content -->
+    </div>
+
+</body>
+
+</html>
